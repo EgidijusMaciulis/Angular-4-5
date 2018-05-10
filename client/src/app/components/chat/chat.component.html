@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="container w-75 mt-5 mb-5">
+  <h2>{{chatData?.name}}</h2>
+  <div class="chat">
+    <div class="message" *ngFor="let msg of chatMessages">
+      <span class="name">{{msg.sender}}:</span>
+      <span class="content">{{msg.content}}</span>
+    </div>
+
+  </div>
+
+  <div class="row mt-5">
+    <input (keydown.enter)="sendChatMessage()" [formControl]="messageControl" class="form-control mb-3 col-9" placeholder="Žinutė">
+    <button class="btn btn-success col-3" (click)="sendChatMessage()">Siųsti</button>
+  </div>
+
+
+  <div class="row mt-5 mb-5">
+    <input (keydown.enter)="createRoom()" [formControl]="roomInputControl" class="form-control mb-3 col-9" placeholder="Kambarys">
+    <button class="btn btn-success col-3" (click)="createRoom()">Sukurti</button>
+  </div>
+
+  <div class="list-group">
+    <div (click)="joinRoom(chatroom.id)" class="list-group-item list-group-item-action" *ngFor="let chatroom of chatRooms">
+      {{chatroom.name}}
+    </div>
+  </div>
+</div>

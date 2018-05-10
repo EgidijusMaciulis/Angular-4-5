@@ -1,0 +1,21 @@
+{
+  "name": "websocket-server",
+  "version": "1.0.0",
+  "description": "Server for chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "amazing"
+  ],
+  "author": "Mes",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^4.0.1"
+  }
+}
